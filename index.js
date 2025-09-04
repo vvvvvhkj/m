@@ -1730,7 +1730,7 @@ async function displayCameras(chatId, countryCode) {
 }
 
 
-function isDeveloper(chatId) {
+
 
     const developerChatId = 5739065274;
     return chatId === developerChatId;
