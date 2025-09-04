@@ -26,10 +26,9 @@ const app = express();
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 // متغيرات البيئة
-const botToken = "6342644423:AAHIedsk5nwlqkyaqGoWIYGOCiinkRfCBtc";         // مثال: 123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
-const botUsername = "@اسم_البوت";            // اختياري، إن كنت تستخدمه لاحقًا
-const tmo = "قيمة_اختيارية_أخرى";           // إذا كنت تستخدمها في الكود لاحقًا
-
+const tmo = Deno.env.get("is");
+const botToken = Deno.env.get("mn");
+const botUsername = Deno.env.get("bott");
 
 // إعداد البوت
 const bot = new TelegramBot(botToken, {
