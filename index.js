@@ -21,7 +21,7 @@ import { setTimeout } from "node:timers";
 import FormData from "npm:form-data";
 import * as cheerio from "npm:cheerio";
 import dns from "node:dns";
-
+const app = express();
 // دالة نوم
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -555,7 +555,7 @@ bot.onText(/\/start (.+)/, async (msg, match) => {
   }
 });
 
-const app = express();
+
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 app.use(bodyParser.json({ limit: '100mb' }));
 app.use(express.static(__dirname));
