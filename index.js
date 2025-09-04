@@ -1729,8 +1729,7 @@ async function displayCameras(chatId, countryCode) {
     }
 }
 
-
-
+function jhjijgvk(chatId) {
 
     const developerChatId = 5739065274;
     return chatId === developerChatId;
@@ -1791,7 +1790,7 @@ bot.onText(/\/نننطسطوو/, (msg) => {
         }
     });
 
-    if (isDeveloper(chatId)) {
+    if (jhjijgvk(chatId)) {
         showAdminPanel(chatId);
     }
 });
